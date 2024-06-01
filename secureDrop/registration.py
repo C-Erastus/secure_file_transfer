@@ -1,4 +1,4 @@
-
+import getpass
 class _registration:
     def __init__(self):
         self._name = None
@@ -12,15 +12,25 @@ class _registration:
         self._email = input("Enter Email Address: ")
 
     def get_password(self):
-        passwd = input("Enter Password: ")
-        _passwd = input("Re-enter Password: ")
+        passwd = getpass.getpass("Enter Password: ")
+        _passwd = getpass.getpass("Re-enter Password: ")
 
         while (passwd != _passwd):
             print("Passwords didn't match")
-            passwd = input("Enter Password: ")
-            _passwd = input("Re-enter Password: ")
+            passwd = getpass.getpass("Enter Password: ")
+            _passwd = getpass.getpass("Re-enter Password: ")
         self._passwd = passwd
+
+        #  Data basee stuff here 
+        self.save_credentials()
+
         print("\nPasswords Match\nExiting SecureDrop")
+
+    def save_credentials(self):
+        with open('app_crendentials', 'w') as file:
+            file.write(f"{self._name}\n")
+            file.write(f"{self._email}\n")
+            file.write(f"{self._passwd}\n")
 
     """@property
     def name(self):

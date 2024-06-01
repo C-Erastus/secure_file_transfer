@@ -14,3 +14,4 @@ if __name__ == "__main__":
 			reg.get_name()
 			reg.get_email()
 			reg.get_password()
+		
