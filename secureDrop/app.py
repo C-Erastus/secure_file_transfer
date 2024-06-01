@@ -7,6 +7,7 @@ if __name__ == "__main__":
 
 	command = input()
 	# check the data base to see if the user is register
+	print("\n")
 	if command == "secureDrop":
 		ret = input("Do you want to register a new user (y/n)?: ")
 		if ret == "y":

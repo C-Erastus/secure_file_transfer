@@ -1,15 +1,15 @@
 
 class _registration:
     def __init__(self):
-        self.name = None
-        self.email = None 
-        self.passwd = None 
+        self._name = None
+        self._email = None 
+        self._passwd = None 
 
     def get_name(self):
-        self.name = input("Enter Full Name: ")
+        self._name = input("Enter Full Name: ")
 
     def get_email(self):
-        self.email = input("Enter Email Address: ")
+        self._email = input("Enter Email Address: ")
 
     def get_password(self):
         passwd = input("Enter Password: ")
@@ -19,7 +19,7 @@ class _registration:
             print("Passwords didn't match")
             passwd = input("Enter Password: ")
             _passwd = input("Re-enter Password: ")
-        self.passwd = passwd
+        self._passwd = passwd
         print("\nPasswords Match\nExiting SecureDrop")
 
     """@property
