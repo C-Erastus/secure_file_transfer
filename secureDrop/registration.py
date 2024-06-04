@@ -1,9 +1,12 @@
 import getpass
+from security import secure
+
 class _registration:
     def __init__(self):
         self._name = None
         self._email = None 
         self._passwd = None 
+        self._secure = secure()
 
     def get_name(self):
         self._name = input("Enter Full Name: ")
@@ -19,7 +22,8 @@ class _registration:
             print("Passwords didn't match")
             passwd = getpass.getpass("Enter Password: ")
             _passwd = getpass.getpass("Re-enter Password: ")
-        self._passwd = passwd
+
+        self._passwd = self._secure.encrypt_passowrd(passwd)
 
         #  Data basee stuff here 
         self.save_credentials()
