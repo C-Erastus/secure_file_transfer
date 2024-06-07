@@ -1,9 +1,10 @@
 from registration import _registration
-
+from login import login
 
 if __name__ == "__main__":
 
 	reg = _registration()
+    _login = login()
 
 	command = input()
 	# check the data base to see if the user is register
@@ -14,4 +15,9 @@ if __name__ == "__main__":
 			reg.get_name()
 			reg.get_email()
 			reg.get_password()
-		
+        elif ret == "n":
+            _login.get_email()
+            _login.get_password()
+            
+            command = input("Type "help" for Commands")
+            

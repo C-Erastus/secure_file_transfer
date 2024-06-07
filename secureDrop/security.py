@@ -8,7 +8,7 @@ class secure:
 		salt = crypt.mksalt(crypt.METHOD_SHA512)
 		passwd = crypt.crypt(passwd, salt)
 
-		return paswd
+		return passwd
 
 	def verify_user(self, passwd):
 		crypt_passwd = self.load_password()

@@ -23,7 +23,7 @@ class _registration:
             passwd = getpass.getpass("Enter Password: ")
             _passwd = getpass.getpass("Re-enter Password: ")
 
-        self._passwd = self._secure.encrypt_passowrd(passwd)
+        self._passwd = self._secure.encrypt_password(passwd)
 
         #  Data basee stuff here 
         self.save_credentials()
