@@ -1,6 +1,12 @@
 from registration import _registration
 from login import login
 
+def help():
+	
+	print("add	-> Add a new contact")
+	print("list	->	List all online contacts")
+	print("send	->	Transfer file to contact")	
+
 if __name__ == "__main__":
 
 	reg = _registration()
